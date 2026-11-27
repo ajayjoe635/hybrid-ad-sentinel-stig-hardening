@@ -1,9 +1,8 @@
 # hybrid-ad-sentinel-stig-hardening
-Hybrid Active Directory Hardening &amp; Cloud SIEM Threat Detection Lab
 
 
 
-/////////////////////////////////////////////////////////////////////
+
 
 
 # Hybrid Active Directory Hardening & Cloud SIEM Threat Detection Lab
