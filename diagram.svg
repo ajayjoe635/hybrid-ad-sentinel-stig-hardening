@@ -1,0 +1,76 @@
+<svg class="dark " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 642.85 635" width="642.85" height="635" id="m7afb9b__root" data-diagram-type="ascii">
+  <style data-mercat-style="universal">.mercat text{font-family:'Google Sans',Roboto,Arial,sans-serif;fill:var(--m-text);dominant-baseline:central}.mercat .m-node .m-shape{fill:var(--m-node-fill);stroke:var(--m-node-stroke);stroke-width:1.5px}.mercat .m-edge .m-path{fill:none;stroke:var(--m-line);stroke-width:1.5px}.mercat .m-note .m-shape{fill:var(--m-note-fill);stroke:var(--m-note-stroke);stroke-width:1px}.mercat .m-note .m-label{fill:var(--m-note-text)}.mercat .t-heading{font-size:14px;font-weight:600}.mercat .t-label{font-size:13px;font-weight:500}</style>
+  <style data-mercat-style="theme-light">#m7afb9b__root{--m-text:#1f1f1f;--m-line:#545454;--m-node-fill:#f8f9fa;--m-node-stroke:#747775;--m-note-fill:#fef9e7;--m-note-stroke:#f39c12;--m-note-text:#1f1f1f}</style>
+  <style data-mercat-style="theme-dark">#m7afb9b__root.dark{--m-text:#e3e3e3;--m-line:#bfbfbf;--m-node-fill:#2d2e30;--m-node-stroke:#8e918f;--m-note-fill:#69550d;--m-note-stroke:#f39c12;--m-note-text:#e3e3e3}</style>
+  <style data-mercat-style="type">#m7afb9b__root .outer-box{fill:var(--m-text);stroke:var(--m-node-stroke);stroke-width:1.75px;fill-opacity:0.06}#m7afb9b__root .header-text{fill:var(--m-text);font-size:14px;font-weight:600;white-space:pre}#m7afb9b__root .label-text{fill:var(--m-text);font-size:13px;font-weight:500;white-space:pre}#m7afb9b__root .arrow-line,#m7afb9b__root .bus-line{fill:none;stroke:var(--m-line);stroke-width:1.5px;stroke-linecap:round;stroke-linejoin:round}#m7afb9b__root .annotation-text{fill:var(--m-text);font-size:12px;font-weight:500;white-space:pre}</style>
+  <style data-mercat-style="diagram">#m7afb9b__root text{font-family:Google Sans Mono, Roboto Mono, monospace}</style>
+  <g class="mercat mercat-ascii">
+    <defs>
+      <marker id="m7afb9b__mk-arrow" refX="9.45" refY="3.4" markerWidth="10.8" markerHeight="6.8" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+        <path d="M 0 0 L 10.8 3.4 L 0 6.8 Z" class="m-marker" fill="var(--m-line)" stroke="none"/>
+      </marker>
+    </defs>
+    <g class="m-node shape outer cluster" id="m7afb9b__node__n0" data-role="step">
+      <rect x="36.25" y="114" width="263.5" height="176" class="m-shape outer-box"/>
+      <text x="163.75" y="158" class="m-label t-heading header-text" text-anchor="middle">Kali Linux (Attacker/QA)</text>
+      <text x="163.75" y="180" class="m-label t-heading header-text" text-anchor="middle">192.168.10.20</text>
+      <text x="163.75" y="202" class="m-label t-heading header-text" text-anchor="middle">- Nmap NSE (SMB/Protocols)</text>
+      <text x="163.75" y="224" class="m-label t-heading header-text" text-anchor="middle">- ldapsearch (Signing QA)</text>
+      <text x="163.75" y="246" class="m-label t-heading header-text" text-anchor="middle">- Broadcast Verification</text>
+    </g>
+    <g class="m-node shape outer cluster" id="m7afb9b__node__n1" data-role="step">
+      <rect x="342.25" y="114" width="263.5" height="176" class="m-shape outer-box"/>
+      <text x="469.75" y="147" class="m-label t-heading header-text" text-anchor="middle">Windows Server 2025 (DC01)</text>
+      <text x="410.25" y="169" class="m-label t-heading header-text" text-anchor="middle">corp.local</text>
+      <text x="533.5" y="191" class="m-label t-heading header-text" text-anchor="middle">192.168.10.10</text>
+      <text x="469.75" y="213" class="m-label t-heading header-text" text-anchor="middle">- AD DS / DNS / GPO</text>
+      <text x="469.75" y="235" class="m-label t-heading header-text" text-anchor="middle">- HardeningKitty (CIS/STIG)</text>
+      <text x="469.75" y="257" class="m-label t-heading header-text" text-anchor="middle">- LSASS PPL / Defender ASR</text>
+    </g>
+    <g class="m-node shape outer cluster" id="m7afb9b__node__n2" data-role="step">
+      <rect x="342.25" y="400" width="263.5" height="220" class="m-shape outer-box"/>
+      <text x="469.75" y="444" class="m-label t-heading header-text" text-anchor="middle">Microsoft Sentinel</text>
+      <text x="469.75" y="466" class="m-label t-heading header-text" text-anchor="middle">(law-hybrid-siem-lab)</text>
+      <text x="359.25" y="510" class="m-label t-label label-text" text-anchor="start">- KQL Threat Hunting</text>
+      <text x="359.25" y="532" class="m-label t-label label-text" text-anchor="start">- Scheduled Analytics Rules</text>
+      <text x="359.25" y="554" class="m-label t-label label-text" text-anchor="start">- MITRE ATT&amp;CK Mapping</text>
+      <text x="359.25" y="576" class="m-label t-label label-text" text-anchor="start">- Entity Incident Triage</text>
+    </g>
+    <g class="m-edge" id="m7afb9b__edge__pt__pt__0" data-role="connector">
+      <line x1="15" y1="15" x2="627" y2="15" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m7afb9b__edge__n0__n1__0" data-role="connector">
+      <line x1="299.75" y1="213" x2="340.9" y2="213" class="m-path arrow-line" marker-end="url(#m7afb9b__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="m7afb9b__edge__pt__pt__1" data-role="connector">
+      <line x1="15" y1="301" x2="627" y2="301" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m7afb9b__edge__pt__pt__2" data-role="connector">
+      <line x1="15" y1="15" x2="15" y2="301" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m7afb9b__edge__n1__pt__0" data-role="connector">
+      <line x1="465.5" y1="158" x2="465.5" y2="180" class="m-path bus-line"/>
+    </g>
+    <g class="m-edge" id="m7afb9b__edge__n1__n2__0" data-role="connector">
+      <line x1="474" y1="301" x2="474" y2="398.65" class="m-path arrow-line" marker-end="url(#m7afb9b__mk-arrow)"/>
+    </g>
+    <g class="m-edge" id="m7afb9b__edge__pt__pt__3" data-role="connector">
+      <line x1="627" y1="15" x2="627" y2="301" class="m-path bus-line"/>
+    </g>
+    <g class="m-node m-note" id="m7afb9b__note__a0" data-role="annotation">
+      <text x="189.25" y="59" class="m-label t-label annotation-text" text-anchor="start">VMware Workstation Host-Only Lab</text>
+    </g>
+    <g class="m-node m-note" id="m7afb9b__note__a1" data-role="annotation">
+      <text x="231.75" y="81" class="m-label t-label annotation-text" text-anchor="start">(192.168.10.0/24)</text>
+    </g>
+    <g class="m-node m-note" id="m7afb9b__note__a2" data-role="annotation">
+      <text x="486.75" y="323" class="m-label t-label annotation-text" text-anchor="start">Telemetry</text>
+    </g>
+    <g class="m-node m-note" id="m7afb9b__note__a3" data-role="annotation">
+      <text x="486.75" y="345" class="m-label t-label annotation-text" text-anchor="start">(Event IDs 4625,</text>
+    </g>
+    <g class="m-node m-note" id="m7afb9b__note__a4" data-role="annotation">
+      <text x="495.25" y="367" class="m-label t-label annotation-text" text-anchor="start">4740, 4104, 4688)</text>
+    </g>
+  </g>
+</svg>
