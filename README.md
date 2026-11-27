@@ -72,6 +72,38 @@ In accordance with enterprise NIST SP 800-53 / DISA STIG risk management practic
 | **`1200`, `2300–2306`** | Restrict Network Logon / Block SMB & RPC Ports | `Excluded` | Intentionally excluded to preserve Active Directory domain authentication (`Authenticated Users`), LDAP, Kerberos, and GPO replication. |
 | **`2400, 2403–2410`** | Xbox Services & GameSave Task | `Manual` / Inert | Consumer components bundled in default OS image; inactive on administrative Server 
 
-SKUs. |
+
 
 ---
+
+
+
+
+---
+
+## Engineering Challenges & Lessons Learned
+* **Balancing CIS/STIG Compliance with Domain Controller Availability:** Discovered why Domain Controllers cannot blindly apply workstation CIS baselines (such as blocking inbound SMB/RPC ports or removing `Authenticated Users` from network logon). By selectively excluding AD-critical controls while hardening LSASS PPL, custom SSP blocking, SMB/LDAP signing, and Defender ASR rules, the compliance score improved from **3.27 (`93` passed)** to **3.94 (`174` passed)** with zero authentication disruption.
+* **Subcategory Audit Policy Precedence:** Resolved conflicts between legacy audit categories and granular `auditpol` subcategories by enforcing `SCENoApplyLegacyAuditPolicy = 1`, ensuring all 26 Security audit subcategories persisted across Group Policy (`gpupdate`) refresh cycles.
+* **Isolated Virtual Network & DNS SRV Troubleshooting:** Diagnosed cross-subnet routing and DNS SRV resolution (`_ldap._tcp.dc._msdcs.corp.local`) across VMware Host-Only interfaces (`192.168.10.0/24`) while keeping active validation isolated from external networks.
+* **Cloud SIEM Cost Hygiene:** Verified end-to-end Sentinel alert ingestion and entity graphing, then executed controlled resource teardown of the Log Analytics workspace and Azure Arc/AMA connectors to maintain zero unintended cloud spend.
+
+---
+
+## Repository Structure
+```text
+hybrid-ad-sentinel-stig-hardening/
+├── README.md
+├── reports/
+│   ├── DC01_Audit_Baseline.csv
+│   └── DC01_Audit_Batch4_Final.csv
+├── scripts/
+│   └── harden-dc01.ps1
+└── screenshots/
+    ├── 00-architecture-diagram.png
+    ├── 01-sentinel-kql-hunt.png
+    ├── 02-sentinel-incident-graph.png
+    ├── 03-hardeningkitty-baseline.png
+    ├── 04-hardeningkitty-final.png
+    ├── 05-nmap-smb-signing.png
+    └── 06-ldap-signing-enforced.png
+```
